@@ -1,0 +1,58 @@
+/* Defines the Custom properties */
+:root {
+    /* Colors */
+  --primary-color: #0065fc;
+  --secondary-color: #deebff;
+  --bg-color: #f2f2f2;
+
+  /* Font sizes */
+  --font-size-small: .9em;
+  --font-size-medium: 1.5em;
+  --font-size-large: 2em;
+
+  /* Border-radius*/
+  --border-radius-light: 15px;
+  --border-radius-strong: 50px;
+
+  /* Margin & padding */
+
+    --margin-small: 0.5rem;
+    --margin-medium: 1rem;
+    --margin-large: 2rem;
+  
+    --padding-small: 0.5rem;
+    --padding-medium: 1rem;
+    --padding-large: 2rem;
+}
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border-radius-ligth {
+  border-radius:var(--border-radius-light);
+}
+.border-radius-strong {
+  border-radius:var(--border-radius-strong);
+}
+
+.section-title {
+  font-size: var(--font-size-large);
+}
+
+.wrapper {
+  min-width: 320px;
+  max-width: 1440px;
+}
