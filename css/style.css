@@ -108,6 +108,12 @@
   display: none;
 }
 
+.wrapper {
+  padding: var(--padding-small) var(--padding-medium);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 /* Reset default styles */
 * {
   margin: 0;
@@ -121,24 +127,64 @@ html {
 }
 a {
   text-decoration: none;
+  color:black;
 } 
 
 ul li {
   list-style: none;
 }
 
-.wrapper {
-  padding: var(--padding-small) var(--padding-medium);
-  margin: 0 auto;
-  max-width: 1440px;
+/* _________________ Styles */
+
+/* Header  */
+header.wrapper {
+  padding: 0;
 }
+
+/* Logo container */
+header.wrapper nav .logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* Logo image  */
+header.wrapper nav .logo-container img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+}
+
+/* Links container */
+header.wrapper nav .links-container ul {
+  display: flex;
+  justify-content: space-around;
+} 
+header.wrapper nav .links-container ul li {
+  flex:1;
+}
+header.wrapper nav .links-container ul li a {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+header.wrapper nav .links-container ul li.nav-link-active  {
+  border-bottom: 2px solid var(--primary-color)
+}
+header.wrapper nav .links-container ul li.nav-link-active a {
+  color: var(--primary-color);
+}
+
+
+
+
+
 
 /* ------------------------------ */
 /*          RESPONSIVE  
 /* ------------------------------ */
 
-
 @media (min-width: 768px) {
+
   /* Responsive Classes: Hide/Show based on screen width */
   .show-lg {
     display: inline-block;
@@ -146,4 +192,11 @@ ul li {
   .lg-d-none {
     display: none;
   }
+
+  /* Utility classes */
+
+  header.wrapper {
+    padding: var(--padding-small) var(--padding-medium);
+  }
+
 }
