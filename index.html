@@ -35,8 +35,8 @@
         <div class="links-container">
           <ul class="nav-links">
             <!-- Ajouut de la classe 'nav-link-active' pour le lien courrant -->
-            <li class="nav-link nav-link-active">Hébergements</li>
-            <li class="nav-link">Activités</li>
+            <li class="nav-link nav-link-active"><a href="#lodgings">Hébergements</a></li>
+            <li class="nav-link"><a href="#activities">Activités</a></li>
           </ul>
         </div>
       </nav>
@@ -46,7 +46,7 @@
     <main class="wrapper">
       <!-- Hero Section -->
       <section class="hero-section">
-        <h1 class="section-title">
+        <h1 class="text-medium">
           Trouvez votre hébergement pour des vacances de rêve
         </h1>
         <h2 class="sub-title">En plein centre-ville ou en pleine nature</h2>
@@ -62,11 +62,11 @@
           </div>
           <!-- Form for the search bar -->
           <form>
-            <input type="text" name="" id="city-search-bar" />
-            <button type="submit">
+            <input type="text" id="city-search-bar" />
+              <button type="submit" class="lg-d-none">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <button type="submit">Rechercher</button>
+            <button type="submit" class="show-lg" >Rechercher</button>
           </form>
         </div>
       </section>
@@ -97,11 +97,11 @@
       </section>
 
       <!-- Lodgings Section -->
-      <section class="lodgings">
+      <section id="lodgings" class="lodgings">
         <!-- Show the cards of the most populars lodging in the requested city -->
         <aside class="most-popular-lodgings-container">
           <header>
-            <h1 class="section-title">Les plus populaires</h1>
+            <h1 class="text-medium">Les plus populaires</h1>
             <i class="fa-solid fa-chart-line"></i>
           </header>
           <div class="cards-container">
@@ -176,7 +176,7 @@
         <!-- Show the cards for the requested city -->
         <div class="searched-city-results-container">
           <header>
-            <h1 class="section-title">Hébergements à Marseille</h1>
+            <h1 class="text-medium">Hébergements à Marseille</h1>
           </header>
           <div class="cards-container">
             <!-- Card 1 -->
@@ -312,10 +312,10 @@
         </div>
       </section>
 
-      <!-- Section Activities -->
-      <section class="activities">
+      <!-- Activities Section  -->
+      <section id="activities" class="activities">
         <header>
-          <h1 class="section-title">Activités à Marseille</h1>
+          <h1 class="text-medium">Activités à Marseille</h1>
         </header>
 
         <div class="cards-container">

@@ -1,28 +1,111 @@
 /* Defines the Custom properties */
 :root {
-    /* Colors */
+  /* Colors */
   --primary-color: #0065fc;
   --secondary-color: #deebff;
   --bg-color: #f2f2f2;
 
   /* Font sizes */
-  --font-size-small: .9em;
+  --font-size-small: 0.9em;
   --font-size-medium: 1.5em;
   --font-size-large: 2em;
 
   /* Border-radius*/
-  --border-radius-light: 15px;
+  --border-radius-light: 10px;
   --border-radius-strong: 50px;
 
-  /* Margin & padding */
+  /* Border*/
+  --border-width-thin: 1px;
+  --border-width-thick: 3px;
 
-    --margin-small: 0.5rem;
-    --margin-medium: 1rem;
-    --margin-large: 2rem;
-  
-    --padding-small: 0.5rem;
-    --padding-medium: 1rem;
-    --padding-large: 2rem;
+  /* Margin & padding */
+  --margin-small: 0.5rem;
+  --margin-medium: 1rem;
+  --margin-large: 2rem;
+
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --padding-large: 2rem;
+
+  /* Shadow */
+  --color-shadow : rgba(0, 0, 0 ,0.25);
+  --box-shadow: 0 4px 10px var(--color-shadow);
+
+
+  /* Breakpoints */
+  --tablet-breakpoint: 768px; /* Tablet */
+  --desktop-breakpoint: 1024px; /* Desktop */
+}
+
+/* ___________ Utility Classes ________________*/
+
+/* Color classes */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.bg-primary {
+  background-color: var(--bg-color);
+}
+
+/* Font-size classes */
+.text-small {
+  font-size: var(--font-size-small);
+}
+.text-medium {
+  font-size: var(--font-size-medium);
+}
+.text-large {
+  font-size: var(--font-size-large);
+}
+
+/* Borders classes */
+.border-thin {
+  border: var(--border-width-thin) solid var(--primary-color);
+}
+.border-thick {
+  border: var(--border-width-thick) solid var(--primary-color);
+}
+.rounded-light {
+  border-radius: var(--border-radius-light);
+}
+.rounded-strong {
+  border-radius: var(--border-radius-strong);
+}
+
+/*  Margin and padding classes */
+.margin-small {
+  margin: var(--margin-small);
+}
+.margin-medium {
+  margin: var(--margin-medium);
+}
+.margin-large {
+  margin: var(--margin-large);
+}
+.padding-small {
+  padding: var(--padding-small);
+}
+.padding-medium {
+  padding: var(--padding-medium);
+}
+.padding-large {
+  padding: var(--padding-large);
+}
+
+/* Box shadow class */
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
+/* Responsive Classes: Hide/Show based on screen width */
+.lg-d-none {
+  display: inline-block;
+}
+.show-lg {
+  display: none;
 }
 
 /* Reset default styles */
@@ -36,23 +119,31 @@
 html {
   scroll-behavior: smooth;
 }
-
 a {
   text-decoration: none;
-}
+} 
 
-.border-radius-ligth {
-  border-radius:var(--border-radius-light);
-}
-.border-radius-strong {
-  border-radius:var(--border-radius-strong);
-}
-
-.section-title {
-  font-size: var(--font-size-large);
+ul li {
+  list-style: none;
 }
 
 .wrapper {
-  min-width: 320px;
+  padding: var(--padding-small) var(--padding-medium);
+  margin: 0 auto;
   max-width: 1440px;
+}
+
+/* ------------------------------ */
+/*          RESPONSIVE  
+/* ------------------------------ */
+
+
+@media (min-width: 768px) {
+  /* Responsive Classes: Hide/Show based on screen width */
+  .show-lg {
+    display: inline-block;
+  }
+  .lg-d-none {
+    display: none;
+  }
 }
