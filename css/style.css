@@ -7,30 +7,54 @@
 
   /* Font sizes */
   --font-size-small: 0.9em;
-  --font-size-medium: 1.5em;
+  --font-size-medium: 1.25em;
   --font-size-large: 2em;
 
   /* Border-radius*/
   --border-radius-light: 10px;
   --border-radius-strong: 50px;
 
-  /* Border*/
+  /* Border-width*/
   --border-width-thin: 1px;
   --border-width-thick: 3px;
+  
+  /* Border-color*/
+  --border: black;
 
-  /* Margin & padding */
+
+
+  /* _________ Margin */
+
+  /* Full margin */
   --margin-small: 0.5rem;
   --margin-medium: 1rem;
   --margin-large: 2rem;
+  /* Margin (axe x) */
+  --margin-x: 1rem;
+  /* Margin (axe y) */
+  --margin-y: 1rem;
+  /* Margin top & bottom */
+  --margin-top: 1rem;
+  /* Margin bottom */
+  --margin-bottom: 1rem;
 
+  /* ________ Padding */
+
+  /* Full padding  */
   --padding-small: 0.5rem;
   --padding-medium: 1rem;
-  --padding-large: 2rem;
+  /* Padding (axe x) */
+  --padding-x: 1rem;
+  /* Padding (axe y) */
+  --padding-y: 1rem;
+  /* Padding top */
+  --padding-top: 1rem;
+  /* Padding bottom */
+  --padding-bottom: 1rem;
 
   /* Shadow */
-  --color-shadow : rgba(0, 0, 0 ,0.25);
+  --color-shadow: rgba(0, 0, 0, 0.25);
   --box-shadow: 0 4px 10px var(--color-shadow);
-
 
   /* Breakpoints */
   --tablet-breakpoint: 768px; /* Tablet */
@@ -38,6 +62,12 @@
 }
 
 /* ___________ Utility Classes ________________*/
+
+.wrapper {
+  padding: var(--padding-small) var(--padding-medium);
+  margin: 0 auto;
+  max-width: 1440px;
+}
 
 /* Color classes */
 .text-primary {
@@ -48,6 +78,35 @@
 }
 .bg-primary {
   background-color: var(--bg-color);
+}
+
+/* Font-weight classes */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
 }
 
 /* Font-size classes */
@@ -68,6 +127,10 @@
 .border-thick {
   border: var(--border-width-thick) solid var(--primary-color);
 }
+.border {
+  border: var(--border-width-thin) solid var(--border);
+}
+
 .rounded-light {
   border-radius: var(--border-radius-light);
 }
@@ -76,6 +139,8 @@
 }
 
 /*  Margin and padding classes */
+
+/* Margins */
 .margin-small {
   margin: var(--margin-small);
 }
@@ -85,14 +150,45 @@
 .margin-large {
   margin: var(--margin-large);
 }
+.m-x{
+  margin: 0 var(--margin-x);
+}
+.m-y{
+  margin: var(--margin-y) 0;
+}
+.m-t{
+  margin-top: var(--margin-top);
+}
+.m-b{
+  margin-bottom: var(--margin-bottom);
+}
+
+/* Paddings */
 .padding-small {
   padding: var(--padding-small);
 }
 .padding-medium {
   padding: var(--padding-medium);
 }
-.padding-large {
-  padding: var(--padding-large);
+.p-x{
+  padding: 0 var(--padding-x);
+}
+.p-y{
+  padding: var(--padding-y) 0;
+}
+
+.p-t{
+  padding-top: var(--padding-top);
+}
+.p-t-small{
+  padding-top: calc(var(--padding-top) / 1.25);
+}
+.p-b{
+  padding-bottom: var(--padding-bottom);
+}
+.p-b-small{
+  padding-top: calc(var(--padding-bottom) / 1.25);
+
 }
 
 /* Box shadow class */
@@ -108,11 +204,6 @@
   display: none;
 }
 
-.wrapper {
-  padding: var(--padding-small) var(--padding-medium);
-  margin: 0 auto;
-  max-width: 1440px;
-}
 
 /* Reset default styles */
 * {
@@ -127,8 +218,8 @@ html {
 }
 a {
   text-decoration: none;
-  color:black;
-} 
+  color: black;
+}
 
 ul li {
   list-style: none;
@@ -158,33 +249,27 @@ header.wrapper nav .logo-container img {
 header.wrapper nav .links-container ul {
   display: flex;
   justify-content: space-around;
-} 
+}
 header.wrapper nav .links-container ul li {
-  flex:1;
+  flex: 1;
 }
 header.wrapper nav .links-container ul li a {
   width: 100%;
   display: inline-block;
   text-align: center;
 }
-header.wrapper nav .links-container ul li.nav-link-active  {
-  border-bottom: 2px solid var(--primary-color)
+header.wrapper nav .links-container ul li.nav-link-active {
+  border-bottom: 2px solid var(--primary-color);
 }
 header.wrapper nav .links-container ul li.nav-link-active a {
   color: var(--primary-color);
 }
-
-
-
-
-
 
 /* ------------------------------ */
 /*          RESPONSIVE  
 /* ------------------------------ */
 
 @media (min-width: 768px) {
-
   /* Responsive Classes: Hide/Show based on screen width */
   .show-lg {
     display: inline-block;
@@ -198,5 +283,4 @@ header.wrapper nav .links-container ul li.nav-link-active a {
   header.wrapper {
     padding: var(--padding-small) var(--padding-medium);
   }
-
 }
