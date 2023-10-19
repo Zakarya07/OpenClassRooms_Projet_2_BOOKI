@@ -2,27 +2,22 @@
 :root {
   /* Colors */
   --primary-color: #0065fc;
+  --primary-color-hover: #deebff;
   --secondary-color: #deebff;
   --bg-color: #f2f2f2;
-
   /* Font sizes */
   --font-size-small: 0.9em;
   --font-size-medium: 1.25em;
   --font-size-large: 2em;
-
   /* Border-radius*/
-  --border-radius-light: 10px;
-  --border-radius-medium: 15px;
-  --border-radius-strong: 50px;
-
+  --border-radius-light: 12px;
+  --border-radius-medium: 24px;
+  --border-radius-strong: 50%;
   /* Border-width*/
-  --border-width-thin: 1px;
-  --border-width-thick: 3px;
-  
+  --border-width-thin: 2px;
+  --border-width-thick: 5px;
   /* Border-color*/
   --border: black;
-
-
 
   /* _________ Margin */
 
@@ -43,15 +38,15 @@
 
   /* Full padding  */
   --padding-small: 0.5rem;
-  --padding-medium: .75rem;
+  --padding-medium: 0.75rem;
   /* Padding (axe x) */
-  --padding-x: .9rem;
+  --padding-x: 0.9rem;
   /* Padding (axe y) */
-  --padding-y: .75rem;
+  --padding-y: 0.75rem;
   /* Padding top */
-  --padding-top: .75rem;
+  --padding-top: 0.75rem;
   /* Padding bottom */
-  --padding-bottom: .75rem;
+  --padding-bottom: 0.75rem;
 
   /* Shadow */
   --color-shadow: rgba(0, 0, 0, 0.25);
@@ -163,16 +158,16 @@
 .margin-large {
   margin: var(--margin-large);
 }
-.m-x{
+.m-x {
   margin: 0 var(--margin-x);
 }
-.m-y{
+.m-y {
   margin: var(--margin-y) 0;
 }
-.m-t{
+.m-t {
   margin-top: var(--margin-top);
 }
-.m-b{
+.m-b {
   margin-bottom: var(--margin-bottom);
 }
 
@@ -183,34 +178,33 @@
 .padding-medium {
   padding: var(--padding-medium);
 }
-.p-x{
+.p-x {
   padding-right: var(--padding-x);
   padding-left: var(--padding-x);
 }
-.p-y{
+.p-y {
   padding-top: var(--padding-y);
   padding-bottom: var(--padding-y);
 }
 
-.p-t{
+.p-t {
   padding-top: var(--padding-top);
 }
-.p-t-small{
+.p-t-small {
   padding-top: calc(var(--padding-top) / 1.25);
 }
-.p-b{
+.p-b {
   padding-bottom: var(--padding-bottom);
 }
-.p-b-small{
+.p-b-small {
   padding-top: calc(var(--padding-bottom) / 1.25);
-
 }
 
 /* Box shadow class */
 .shadow {
   box-shadow: var(--box-shadow-light);
 }
-.shadow-strong{
+.shadow-strong {
   box-shadow: var(--box-shadow-strong);
 }
 
@@ -221,7 +215,6 @@
 .show-lg {
   display: none;
 }
-
 
 /* Reset default styles */
 * {
@@ -284,7 +277,7 @@ header.wrapper nav .links-container ul li.nav-link-active a {
   color: var(--primary-color);
 }
 
-/* Search bar Section */
+/* ________ Search bar Section */
 
 section.search-bar .search-bar-container {
   height: 7.5vh;
@@ -292,40 +285,65 @@ section.search-bar .search-bar-container {
   align-content: center;
   border-color: var(--bg-color);
 }
-
 /* Location button */
 section.search-bar .search-bar-container .location-icon {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 /* Form */
-section.search-bar .search-bar-container form{
-height: 100%;
-display: flex;
-flex: 1;
+section.search-bar .search-bar-container form {
+  height: 100%;
+  display: flex;
+  flex: 1;
 }
-section.search-bar .search-bar-container form input[type="text"]{
+section.search-bar .search-bar-container form input[type="text"] {
   font-size: 1em;
   flex: 1;
 }
-section.search-bar .search-bar-container form button[type="submit"]{
+section.search-bar .search-bar-container form button[type="submit"] {
   color: white;
 }
 
+/* ___________ Filters Section */
 
-
-
-
-
-
-
-
-
-
-
-
-
+section.filters {
+}
+/* Filters Container */
+section.filters .filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-between;
+}
+/* Filter pills */
+section.filters .filter-container .filter {
+  width: 48%;
+  border-color: lightgrey;
+}
+section.filters .filter-container .filter:hover {
+  background-color: var(--primary-color-hover);
+}
+/* Filter icons */
+section.filters .filter-container .filter i {
+  color: var(--primary-color);
+}
+/* Results */
+section.filters .informations-result-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* icon  */
+section.filters .informations-result-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-color: var(--bg-color);
+  font-size: .75em;
+}
 
 /* ------------------------------ */
 /*          RESPONSIVE  
