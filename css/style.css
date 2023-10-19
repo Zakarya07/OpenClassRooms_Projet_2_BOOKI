@@ -12,6 +12,7 @@
 
   /* Border-radius*/
   --border-radius-light: 10px;
+  --border-radius-medium: 15px;
   --border-radius-strong: 50px;
 
   /* Border-width*/
@@ -32,7 +33,7 @@
   /* Margin (axe x) */
   --margin-x: 1rem;
   /* Margin (axe y) */
-  --margin-y: 1rem;
+  --margin-y: 1.5rem;
   /* Margin top & bottom */
   --margin-top: 1rem;
   /* Margin bottom */
@@ -42,19 +43,22 @@
 
   /* Full padding  */
   --padding-small: 0.5rem;
-  --padding-medium: 1rem;
+  --padding-medium: .75rem;
   /* Padding (axe x) */
-  --padding-x: 1rem;
+  --padding-x: .9rem;
   /* Padding (axe y) */
-  --padding-y: 1rem;
+  --padding-y: .75rem;
   /* Padding top */
-  --padding-top: 1rem;
+  --padding-top: .75rem;
   /* Padding bottom */
-  --padding-bottom: 1rem;
+  --padding-bottom: .75rem;
 
   /* Shadow */
   --color-shadow: rgba(0, 0, 0, 0.25);
-  --box-shadow: 0 4px 10px var(--color-shadow);
+  --color-shadow-strong: rgba(0, 0, 0, 0.4);
+
+  --box-shadow-light: 0 4px 10px var(--color-shadow);
+  --box-shadow-strong: 1px 5px 3px var(--color-shadow-strong);
 
   /* Breakpoints */
   --tablet-breakpoint: 768px; /* Tablet */
@@ -76,8 +80,11 @@
 .text-secondary {
   color: var(--secondary-color);
 }
-.bg-primary {
+.bg-secondary {
   background-color: var(--bg-color);
+}
+.bg-primary {
+  background-color: var(--primary-color);
 }
 
 /* Font-weight classes */
@@ -130,9 +137,15 @@
 .border {
   border: var(--border-width-thin) solid var(--border);
 }
+.b-none {
+  border: none;
+}
 
 .rounded-light {
   border-radius: var(--border-radius-light);
+}
+.rounded-medium {
+  border-radius: var(--border-radius-medium);
 }
 .rounded-strong {
   border-radius: var(--border-radius-strong);
@@ -171,10 +184,12 @@
   padding: var(--padding-medium);
 }
 .p-x{
-  padding: 0 var(--padding-x);
+  padding-right: var(--padding-x);
+  padding-left: var(--padding-x);
 }
 .p-y{
-  padding: var(--padding-y) 0;
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
 }
 
 .p-t{
@@ -193,7 +208,10 @@
 
 /* Box shadow class */
 .shadow {
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-light);
+}
+.shadow-strong{
+  box-shadow: var(--box-shadow-strong);
 }
 
 /* Responsive Classes: Hide/Show based on screen width */
@@ -225,9 +243,10 @@ ul li {
   list-style: none;
 }
 
-/* _________________ Styles */
+/* _________________ Styles ________________ */
 
-/* Header  */
+/* _________ Header  */
+
 header.wrapper {
   padding: 0;
 }
@@ -264,6 +283,49 @@ header.wrapper nav .links-container ul li.nav-link-active {
 header.wrapper nav .links-container ul li.nav-link-active a {
   color: var(--primary-color);
 }
+
+/* Search bar Section */
+
+section.search-bar .search-bar-container {
+  height: 7.5vh;
+  display: flex;
+  align-content: center;
+  border-color: var(--bg-color);
+}
+
+/* Location button */
+section.search-bar .search-bar-container .location-icon {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Form */
+section.search-bar .search-bar-container form{
+height: 100%;
+display: flex;
+flex: 1;
+}
+section.search-bar .search-bar-container form input[type="text"]{
+  font-size: 1em;
+  flex: 1;
+}
+section.search-bar .search-bar-container form button[type="submit"]{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------ */
 /*          RESPONSIVE  
