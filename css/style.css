@@ -491,9 +491,21 @@ section#activities .cards-container article.activity-card .content {
   padding: var(--padding-small);
 }
 
+/* _______________ Footer */
 
-
-
+footer .footer-column {
+  font-size: var(--font-size-small);
+  padding:var(--padding-small);
+}
+footer .footer-column h3 {
+  margin-bottom: var(--margin-bottom);
+}
+footer .footer-column ul {
+  margin-bottom: var(--margin-bottom);
+}
+footer .footer-column ul li{
+  padding-bottom: var(--padding-bottom);
+}
 
 
 
