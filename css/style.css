@@ -395,19 +395,18 @@ section#lodgings > aside .cards-container article.most-popular-card {
 
 /* Image */
 section#lodgings > aside .cards-container article.most-popular-card .image-container {
-  background: url("../images/lodgings/soleil-du-matin.jpg") center / cover;
   width: 35%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  overflow: hidden;
 }
-/* image card 2 */
- #popular-card-2 .image-container {
-  background-image: url("../images/lodgings/au-coeur-de-l\'eau.jpg") !important;
+section#lodgings > aside .cards-container article.most-popular-card .image-container img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+object-position: center;
 }
-/* image card 3 */
- #popular-card-3 .image-container {
-  background-image: url("../images/lodgings/bleu-et-blanc.jpg") !important;
-}
+
 /* Content */
 section#lodgings > aside .cards-container article.most-popular-card .content {
   flex: 1;
@@ -427,27 +426,19 @@ section#lodgings .searched-city-results-container .cards-container article.card 
 
 /* Image  */
 section#lodgings .searched-city-results-container .cards-container article.card .image-container {
-  background: url("../images/lodgings/hôtel-du-port.jpg") center / cover;
   height: 55%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+section#lodgings .searched-city-results-container .cards-container article.card .image-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-section#lodgings a#city-card-2 .image-container{
-  background-image: url("../images/lodgings/auberge-de-la-cannebière.jpg");
-}
-section#lodgings a#city-card-3 .image-container{
-  background-image: url("../images/lodgings/les-mouettes.jpg");
-}
-section#lodgings a#city-card-4 .image-container{
-  background-image: url("../images/lodgings/hôtel-de-la-mer.jpg");
-}
-section#lodgings a#city-card-5 .image-container{
-  background-image: url("../images/lodgings/auberge-le-panier.jpg");
-}
-section#lodgings a#city-card-6 .image-container{
-  background-image: url("../images/lodgings/chez-amina.jpg");
-}
+
 
 /* content */
 section#lodgings .searched-city-results-container .cards-container article.card .content {
