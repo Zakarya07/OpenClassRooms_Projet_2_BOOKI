@@ -6,6 +6,7 @@
   --secondary-color: #deebff;
   --bg-color: #f2f2f2;
   /* Font sizes */
+  --font-size-super-small: 0.7em;
   --font-size-small: 0.9em;
   --font-size-medium: 1.25em;
   --font-size-large: 2em;
@@ -69,17 +70,24 @@
 }
 
 /* Color classes */
+
+/* text color */
 .text-primary {
   color: var(--primary-color);
 }
 .text-secondary {
   color: var(--secondary-color);
 }
+
+/* backgrounds */
 .bg-secondary {
   background-color: var(--bg-color);
 }
 .bg-primary {
   background-color: var(--primary-color);
+}
+.bg-white {
+  background-color: white;
 }
 
 /* Font-weight classes */
@@ -112,6 +120,9 @@
 }
 
 /* Font-size classes */
+.text-super-small {
+  font-size: var(--font-size-super-small);
+}
 .text-small {
   font-size: var(--font-size-small);
 }
@@ -277,7 +288,7 @@ header.wrapper nav .links-container ul li.nav-link-active a {
   color: var(--primary-color);
 }
 
-/* ________ Search bar Section */
+/* ____________ Search bar Section */
 
 section.search-bar .search-bar-container {
   height: 7.5vh;
@@ -304,7 +315,7 @@ section.search-bar .search-bar-container form button[type="submit"] {
   color: white;
 }
 
-/* ___________ Filters Section */
+/* __________ Filters Section */
 
 section.filters {
 }
@@ -342,7 +353,60 @@ section.filters .informations-result-container div {
   height: 20px;
   padding: 10px;
   border-color: var(--bg-color);
-  font-size: .75em;
+  font-size: 0.75em;
+}
+
+/* ____________ Lodgings section */
+
+/* Aside */
+section#lodgings > aside.most-popular-lodgings-container {
+}
+/* Aside header */
+section#lodgings > aside header {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+/* Cards container */
+section#lodgings > aside .cards-container {
+}
+/* Cards */
+section#lodgings > aside .cards-container article.most-popular-card {
+  display: flex;
+  height: 22vh;
+  justify-content: space-between;
+  padding: 0.25em;
+}
+
+/* Image */
+section#lodgings
+  > aside
+  .cards-container
+  article.most-popular-card
+  .image-container {
+  background: url("../images/lodgings/soleil-du-matin.jpg") center / cover;
+  width: 35%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* image card 2 */
+ #popular-card-2 .image-container {
+  background-image: url("../images/lodgings/au-coeur-de-l\'eau.jpg") !important;
+}
+/* image card 3 */
+ #popular-card-3 .image-container {
+  background-image: url("../images/lodgings/bleu-et-blanc.jpg") !important;
+}
+
+/* Content */
+section#lodgings > aside .cards-container article.most-popular-card .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section#lodgings article.most-popular-card .rating-container i:last-child {
 }
 
 /* ------------------------------ */
