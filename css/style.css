@@ -227,6 +227,22 @@
   display: none;
 }
 
+
+/* -------------- */
+/* General card styles  */
+
+.night-price {
+  font-size: var(--font-size-small);
+}
+
+.night-price span {
+  font-weight: 600;
+}
+
+/* --------------- */
+
+
+
 /* Reset default styles */
 * {
   margin: 0;
@@ -358,9 +374,8 @@ section.filters .informations-result-container div {
 
 /* ____________ Lodgings section */
 
-/* Aside */
-section#lodgings > aside.most-popular-lodgings-container {
-}
+/* ---- Aside ----- */
+
 /* Aside header */
 section#lodgings > aside header {
   display: flex;
@@ -379,11 +394,7 @@ section#lodgings > aside .cards-container article.most-popular-card {
 }
 
 /* Image */
-section#lodgings
-  > aside
-  .cards-container
-  article.most-popular-card
-  .image-container {
+section#lodgings > aside .cards-container article.most-popular-card .image-container {
   background: url("../images/lodgings/soleil-du-matin.jpg") center / cover;
   width: 35%;
   border-top-right-radius: 0;
@@ -397,7 +408,6 @@ section#lodgings
  #popular-card-3 .image-container {
   background-image: url("../images/lodgings/bleu-et-blanc.jpg") !important;
 }
-
 /* Content */
 section#lodgings > aside .cards-container article.most-popular-card .content {
   flex: 1;
@@ -406,8 +416,61 @@ section#lodgings > aside .cards-container article.most-popular-card .content {
   justify-content: space-between;
 }
 
-section#lodgings article.most-popular-card .rating-container i:last-child {
+/* ------- City results ------ */
+/* Card  */
+section#lodgings .searched-city-results-container .cards-container article.card {
+  height: 30vh;
+  padding: 0.25em;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Image  */
+section#lodgings .searched-city-results-container .cards-container article.card .image-container {
+  background: url("../images/lodgings/hôtel-du-port.jpg") center / cover;
+  height: 55%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+section#lodgings a#city-card-2 .image-container{
+  background-image: url("../images/lodgings/auberge-de-la-cannebière.jpg");
+}
+section#lodgings a#city-card-3 .image-container{
+  background-image: url("../images/lodgings/les-mouettes.jpg");
+}
+section#lodgings a#city-card-4 .image-container{
+  background-image: url("../images/lodgings/hôtel-de-la-mer.jpg");
+}
+section#lodgings a#city-card-5 .image-container{
+  background-image: url("../images/lodgings/auberge-le-panier.jpg");
+}
+section#lodgings a#city-card-6 .image-container{
+  background-image: url("../images/lodgings/chez-amina.jpg");
+}
+
+/* content */
+section#lodgings .searched-city-results-container .cards-container article.card .content {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+}
+section#lodgings .searched-city-results-container .cards-container article.card .content .lodging-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------ */
 /*          RESPONSIVE  
