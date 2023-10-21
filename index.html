@@ -43,9 +43,9 @@
     </header>
 
     <!-- __________________ MAIN -->
-    <main class="wrapper">
+    <main>
       <!-- Hero Section -->
-      <section class="hero-section m-b">
+      <section class="hero-section m-b wrapper">
         <h2 class="text-medium">
           Trouvez votre hébergement pour des vacances de rêve
         </h2>
@@ -53,7 +53,7 @@
       </section>
 
       <!-- Search bar Section  -->
-      <section class="search-bar m-y">
+      <section class="search-bar m-t wrapper">
         <!-- Search bar container -->
         <div class="search-bar-container border rounded-light">
           <!-- Location Icon -->
@@ -67,28 +67,28 @@
             <button type="submit" class="lg-d-none p-x padding-medium rounded-light bg-primary b-none shadow-strong">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <button type="submit" class="show-lg" >Rechercher</button>
+            <button type="submit" class="show-lg bg-primary b-none padding-medium rounded-light" >Rechercher</button>
           </form>
         </div>
       </section>
 
       <!-- Filter Section -->
-      <section class="filters m-y">
+      <section class="filters m-b p-b wrapper">
         <!-- Title -->
-        <h3 class="text-medium p-y">Filtres</h3>
+        <h3 class="p-y">Filtres</h3>
         <!-- Filters Container -->
         <div class="filter-container m-y">
           <div class="filter m-b text-small fw-600 border-thin padding-medium rounded-medium">
-            <p><i class="text-medium fa-solid fa-money-bill-wave"></i> Économique</p>
+            <p class="text-small"><i class="text-medium fa-solid fa-money-bill-wave"></i> Économique</p>
           </div>
           <div class="filter m-b text-small fw-600 border-thin padding-medium rounded-medium">
-            <p><i class="text-medium fa-solid fa-person"></i> Familial</p>
+            <p class="text-small"><i class="text-medium fa-solid fa-person"></i> Familial</p>
           </div>
           <div class="filter m-b text-small fw-600 border-thin padding-medium rounded-medium">
-            <p><i class="text-medium fa-solid fa-heart"></i> Romantique</p>
+            <p class="text-small"><i class="text-medium fa-solid fa-heart"></i> Romantique</p>
           </div>
           <div class="filter m-b text-small fw-600 border-thin padding-medium rounded-medium">
-            <p><i class="text-medium fa-solid fa-fire"></i> Nos pépites</p>
+            <p class="text-small"><i class="text-medium fa-solid fa-fire"></i> Nos pépites</p>
           </div>
         </div>
         <div class="informations-result-container">
@@ -98,11 +98,11 @@
       </section>
 
       <!-- Lodgings Section -->
-      <section id="lodgings" class="lodgings">
+      <section id="lodgings" class="lodgings wrapper">
 
         <!-- Show the cards of the most populars lodging in the requested city -->
         <aside class="most-popular-lodgings-container bg-secondary p-y">
-          <header class="m-b">
+          <header class="m-b p-t">
             <h2 class="text-medium">Les plus populaires</h2>
             <i class="fa-solid fa-chart-line text-primary"></i>
           </header>
@@ -334,7 +334,7 @@
       </section>
 
       <!-- Activities Section  -->
-      <section id="activities" class="p-y">
+      <section id="activities" class="p-y wrapper">
         <header class="m-y">
           <h2 class="text-medium">Activités à Marseille</h2>
         </header>

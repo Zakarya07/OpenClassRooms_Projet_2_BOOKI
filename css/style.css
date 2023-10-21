@@ -173,7 +173,8 @@
   margin: 0 var(--margin-x);
 }
 .m-y {
-  margin: var(--margin-y) 0;
+  margin-top: var(--margin-y);
+  margin-bottom: var(--margin-y);
 }
 .m-t {
   margin-top: var(--margin-top);
@@ -227,7 +228,6 @@
   display: none;
 }
 
-
 /* -------------- */
 /* General card styles  */
 
@@ -240,8 +240,6 @@
 }
 
 /* --------------- */
-
-
 
 /* Reset default styles */
 * {
@@ -279,8 +277,8 @@ header.wrapper nav .logo-container {
 }
 /* Logo image  */
 header.wrapper nav .logo-container img {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   object-fit: contain;
 }
 
@@ -296,6 +294,7 @@ header.wrapper nav .links-container ul li a {
   width: 100%;
   display: inline-block;
   text-align: center;
+  font-size: var(--font-size-small);
 }
 header.wrapper nav .links-container ul li.nav-link-active {
   border-bottom: 2px solid var(--primary-color);
@@ -307,7 +306,7 @@ header.wrapper nav .links-container ul li.nav-link-active a {
 /* ____________ Search bar Section */
 
 section.search-bar .search-bar-container {
-  height: 7.5vh;
+  height: 50px;
   display: flex;
   align-content: center;
   border-color: var(--bg-color);
@@ -316,6 +315,8 @@ section.search-bar .search-bar-container {
 section.search-bar .search-bar-container .location-icon {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  display: flex;
+  align-items: center;
 }
 /* Form */
 section.search-bar .search-bar-container form {
@@ -351,6 +352,11 @@ section.filters .filter-container .filter:hover {
   background-color: var(--primary-color-hover);
 }
 /* Filter icons */
+section.filters .filter-container .filter p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 section.filters .filter-container .filter i {
   color: var(--primary-color);
 }
@@ -374,8 +380,15 @@ section.filters .informations-result-container div {
 
 /* ____________ Lodgings section */
 
-/* ---- Aside ----- */
+section#lodgings.wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
 
+/* ---- Aside ----- */
+section#lodgings aside {
+  padding: var(--padding-small);
+}
 /* Aside header */
 section#lodgings > aside header {
   display: flex;
@@ -394,17 +407,26 @@ section#lodgings > aside .cards-container article.most-popular-card {
 }
 
 /* Image */
-section#lodgings > aside .cards-container article.most-popular-card .image-container {
+section#lodgings
+  > aside
+  .cards-container
+  article.most-popular-card
+  .image-container {
   width: 35%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   overflow: hidden;
 }
-section#lodgings > aside .cards-container article.most-popular-card .image-container img{
-height: 100%;
-width: 100%;
-object-fit: cover;
-object-position: center;
+section#lodgings
+  > aside
+  .cards-container
+  article.most-popular-card
+  .image-container
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Content */
@@ -416,43 +438,65 @@ section#lodgings > aside .cards-container article.most-popular-card .content {
 }
 
 /* ------- City results ------ */
+
+section#lodgings .searched-city-results-container {
+  padding: var(--padding-small);
+}
+
 /* Card  */
-section#lodgings .searched-city-results-container .cards-container article.card {
+section#lodgings
+  .searched-city-results-container
+  .cards-container
+  article.card {
   height: 30vh;
   padding: 0.25em;
   display: flex;
   flex-direction: column;
 }
-
 /* Image  */
-section#lodgings .searched-city-results-container .cards-container article.card .image-container {
+section#lodgings
+  .searched-city-results-container
+  .cards-container
+  article.card
+  .image-container {
   height: 55%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   overflow: hidden;
 }
-section#lodgings .searched-city-results-container .cards-container article.card .image-container img{
+section#lodgings
+  .searched-city-results-container
+  .cards-container
+  article.card
+  .image-container
+  img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-
-
 /* content */
-section#lodgings .searched-city-results-container .cards-container article.card .content {
+section#lodgings
+  .searched-city-results-container
+  .cards-container
+  article.card
+  .content {
   display: flex;
   flex-direction: column;
   height: 45%;
 }
-section#lodgings .searched-city-results-container .cards-container article.card .content .lodging-info {
+section#lodgings
+  .searched-city-results-container
+  .cards-container
+  article.card
+  .content
+  .lodging-info {
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: space-evenly;
 }
-
 
 /* _____________ Activities Section */
 
@@ -468,17 +512,17 @@ section#activities .cards-container article.activity-card .image-container {
   border-radius: var(--border-radius-light);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 section#activities .cards-container article.activity-card .image-container img {
-height: 100%;
-width: 100%;
-object-fit: cover;
-object-position: center;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 /* Content */
 section#activities .cards-container article.activity-card .content {
-  font-size:var(--font-size-small);
+  font-size: var(--font-size-small);
   padding: var(--padding-small);
 }
 
@@ -486,7 +530,7 @@ section#activities .cards-container article.activity-card .content {
 
 footer .footer-column {
   font-size: var(--font-size-small);
-  padding:var(--padding-small);
+  padding: var(--padding-small);
 }
 footer .footer-column h3 {
   margin-bottom: var(--margin-bottom);
@@ -494,11 +538,9 @@ footer .footer-column h3 {
 footer .footer-column ul {
   margin-bottom: var(--margin-bottom);
 }
-footer .footer-column ul li{
+footer .footer-column ul li {
   padding-bottom: var(--padding-bottom);
 }
-
-
 
 /* ------------------------------ */
 /*          RESPONSIVE  
