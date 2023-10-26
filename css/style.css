@@ -306,7 +306,7 @@ header.wrapper nav .links-container ul li.nav-link-active a {
 /* ____________ Search bar Section */
 
 section.search-bar .search-bar-container {
-  height: 50px;
+  height: 45px;
   display: flex;
   align-content: center;
   border-color: var(--bg-color);
@@ -394,6 +394,7 @@ section#lodgings > aside header {
   display: flex;
   gap: 5px;
   justify-content: space-between;
+  align-items: center;
 }
 /* Cards container */
 section#lodgings > aside .cards-container {
@@ -401,7 +402,7 @@ section#lodgings > aside .cards-container {
 /* Cards */
 section#lodgings > aside .cards-container article.most-popular-card {
   display: flex;
-  height: 22vh;
+  height: 140px;
   justify-content: space-between;
   padding: 0.25em;
 }
@@ -448,7 +449,7 @@ section#lodgings
   .searched-city-results-container
   .cards-container
   article.card {
-  height: 30vh;
+  height: 180px;
   padding: 0.25em;
   display: flex;
   flex-direction: column;
@@ -503,7 +504,7 @@ section#lodgings
 section#activities .cards-container {
 }
 section#activities .cards-container article.activity-card {
-  height: 30vh;
+  height: 180px;
   margin: 2vh auto;
 }
 /* Image */
@@ -542,10 +543,11 @@ footer .footer-column ul li {
   padding-bottom: var(--padding-bottom);
 }
 
-/* ------------------------------ */
-/*          RESPONSIVE  
-/* ------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+/*                                                                    RESPONSIVE  
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* __________ Tablet */
 @media (min-width: 768px) {
   /* Responsive Classes: Hide/Show based on screen width */
   .show-lg {
@@ -554,10 +556,182 @@ footer .footer-column ul li {
   .lg-d-none {
     display: none;
   }
-
-  /* Utility classes */
-
-  header.wrapper {
-    padding: var(--padding-small) var(--padding-medium);
+  .wrapper {
+    padding: var(--padding-small) calc(var(--padding-medium) * 2.5);
   }
+  /* _________________________Styles */
+
+  /* ---------- Header */
+  header.wrapper {
+    padding: 0 calc(var(--padding-medium) * 2.5);
+  }
+
+  header nav {
+    display: flex;
+  }
+  header.wrapper > nav > div.logo-container {
+    justify-content: flex-start;
+  }
+
+  header.wrapper nav .links-container ul li.nav-link-active {
+    border-bottom: unset;
+    border-top: 2px solid var(--primary-color);
+  }
+
+  /* --------- Search bar section */
+  section.search-bar .search-bar-container {
+    width: fit-content;
+  }
+
+  section.search-bar .search-bar-container button.show-lg {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: var(--padding-medium) calc(var(--padding-medium) * 1.5);
+    font-size: calc(var(--font-size-small) * 1.1);
+  }
+
+  /* ---------- Filters section */
+
+  section.filters > h3 {
+    font-size: calc(var(--font-size-small) * 1.1);
+  }
+
+  section.filters .filter-container {
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 0;
+  }
+  section.filters .filter-container .filter {
+    width: auto;
+    padding: calc(var(--padding-medium) / 1.1) var(--padding-x);
+  }
+
+  /* -------------- Lodgings */
+
+  /* ______ Results city  */
+  section#lodgings {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section#lodgings.wrapper {
+    padding: var(--padding-small) calc(var(--padding-medium) * 2.5);
+  }
+
+  section#lodgings.wrapper > * {
+    padding: var(--padding-small) calc(var(--padding-medium) * 1.5);
+  }
+
+  section#lodgings .searched-city-results-container {
+    background-color: var(--bg-color);
+    margin-bottom: calc(var(--margin-bottom) * 3);
+  }
+
+  section#lodgings .searched-city-results-container .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+  }
+
+  section#lodgings
+    .searched-city-results-container
+    .cards-container
+    article.card {
+    height: 160px;
+    display: flex;
+    background: white;
+    flex-direction: column;
+  }
+
+  #city-card-2 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  #city-card-6 {
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+
+  section#lodgings
+    .searched-city-results-container
+    .cards-container
+    article.card
+    .content {
+    --font-size-small: 0.8em;
+  }
+
+  section#lodgings .searched-city-results-container .show-more {
+    font-size: var(--font-size-small);
+  }
+
+  /* ________ Aside (popular cards) */
+
+  section#lodgings > aside {
+    border-radius: var(--border-radius-light);
+  }
+
+  section#lodgings > aside .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .75em;
+  }
+
+  section#lodgings > aside .cards-container article.most-popular-card {
+    height: 120px;
+    font-size: var(--font-size-small);
+  }
+  section#lodgings
+    > aside
+    .cards-container
+    article.most-popular-card
+    .image-container {
+    width: 30%;
+  }
+
+  section#lodgings > aside .cards-container article.most-popular-card .content {
+    padding-left: var(--padding-medium);
+  }
+
+  /* ------ Activities section */
+  section#activities .cards-container {
+    gap: 1.25em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section#activities .cards-container article.activity-card {
+    --border-radius-light: 16px;
+    height: 240px;
+  }
+
+  section#activities .cards-container article.activity-card .image-container {
+  height: 75%;    
+  }
+  section#activities .cards-container article.activity-card .content {
+    font-size: calc(var(--font-size-small)  / 1.05);
+    height: 25%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* --------Footer */
+  footer.wrapper {
+    margin-top: var(--margin-large);
+    background: transparent;
+    padding-bottom: 0;
+  }
+
+  footer.wrapper > .inside-wrapper {
+    background-color: var(--bg-color);
+    padding: var(--padding-medium) var(--margin-medium) 0;
+    display: flex;
+  }
+
+  footer.wrapper .footer-column {
+    --font-size-small: 0.8em;
+    flex: 1;
+  }
+}
+/* __________ Desktop */
+@media (min-width: 1024px) {
 }
