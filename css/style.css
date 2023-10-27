@@ -296,10 +296,10 @@ header.wrapper nav .links-container ul li a {
   text-align: center;
   font-size: var(--font-size-small);
 }
-header.wrapper nav .links-container ul li.nav-link-active {
+header.wrapper nav .links-container ul li:hover {
   border-bottom: 2px solid var(--primary-color);
 }
-header.wrapper nav .links-container ul li.nav-link-active a {
+header.wrapper nav .links-container ul li:hover  a {
   color: var(--primary-color);
 }
 
@@ -346,6 +346,7 @@ section.filters .filter-container {
 /* Filter pills */
 section.filters .filter-container .filter {
   width: 48%;
+  cursor: pointer;
   border-color: lightgrey;
 }
 section.filters .filter-container .filter:hover {
@@ -543,6 +544,11 @@ footer .footer-column ul li {
   padding-bottom: var(--padding-bottom);
 }
 
+
+
+
+
+
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
 /*                                                                    RESPONSIVE  
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
@@ -579,7 +585,18 @@ footer .footer-column ul li {
     justify-content: flex-start;
   }
 
-  header.wrapper nav .links-container ul li.nav-link-active {
+
+
+  header.wrapper nav .links-container ul {
+    height: 80%;
+    gap: 20px;
+}
+  header.wrapper nav .links-container ul li {
+    display: flex;
+    align-items: center;
+}
+  
+  header.wrapper nav .links-container ul li:hover {
     border-bottom: unset;
     border-top: 2px solid var(--primary-color);
   }
