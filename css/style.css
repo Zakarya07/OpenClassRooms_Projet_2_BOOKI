@@ -549,6 +549,14 @@ footer .footer-column ul li {
 
 /* __________ Tablet */
 @media (min-width: 768px) {
+
+  /* Remove margin (y axe) for the cards */
+  :is(.activity-card,.card,.most-popular-card) {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
+
   /* Responsive Classes: Hide/Show based on screen width */
   .show-lg {
     display: inline-block;
@@ -673,7 +681,7 @@ footer .footer-column ul li {
   section#lodgings > aside .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .75em;
+    gap: 0.75em;
   }
 
   section#lodgings > aside .cards-container article.most-popular-card {
@@ -705,10 +713,10 @@ footer .footer-column ul li {
   }
 
   section#activities .cards-container article.activity-card .image-container {
-  height: 75%;    
+    height: 75%;
   }
   section#activities .cards-container article.activity-card .content {
-    font-size: calc(var(--font-size-small)  / 1.05);
+    font-size: calc(var(--font-size-small) / 1.05);
     height: 25%;
     display: flex;
     align-items: center;
@@ -732,6 +740,40 @@ footer .footer-column ul li {
     flex: 1;
   }
 }
-/* __________ Desktop */
+
+/* ____________________________ Desktop */
 @media (min-width: 1024px) {
+
+  /* ----------- Lodgings Section  */
+  section#lodgings {
+    flex-direction: row-reverse;
+    gap: 15px;
+  }
+  /* Results city container */
+  section#lodgings .searched-city-results-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* Aside */
+  section#lodgings > aside {
+    width: 35%;
+  }
+  section#lodgings > aside .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------- Activities section */
+  section#activities .cards-container article.activity-card {
+    height: 320px;
+  }
+  /* Image */
+  section#activities .cards-container article.activity-card .image-container {
+    height: 85%;
+  }
+  /* Content */
+  section#activities .cards-container article.activity-card .content {
+    height: auto;
+  }
 }
