@@ -549,13 +549,11 @@ footer .footer-column ul li {
 
 /* __________ Tablet */
 @media (min-width: 768px) {
-
   /* Remove margin (y axe) for the cards */
-  :is(.activity-card,.card,.most-popular-card) {
+  :is(.activity-card, .card, .most-popular-card) {
     margin-bottom: 0 !important;
     margin-top: 0 !important;
   }
-
 
   /* Responsive Classes: Hide/Show based on screen width */
   .show-lg {
@@ -743,11 +741,10 @@ footer .footer-column ul li {
 
 /* ____________________________ Desktop */
 @media (min-width: 1024px) {
-
   /* ----------- Lodgings Section  */
   section#lodgings {
     flex-direction: row-reverse;
-    gap: 15px;
+    gap: 30px;
   }
   /* Results city container */
   section#lodgings .searched-city-results-container {
@@ -755,10 +752,11 @@ footer .footer-column ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1;
   }
   /* Aside */
   section#lodgings > aside {
-    width: 35%;
+    width: 30%;
   }
   section#lodgings > aside .cards-container {
     grid-template-columns: 1fr;
@@ -776,4 +774,56 @@ footer .footer-column ul li {
   section#activities .cards-container article.activity-card .content {
     height: auto;
   }
+}
+
+/* ____________________________Large desktop */
+@media (min-width: 1440px) {
+  /* ---------- Lodgings section */
+  section#lodgings {
+    gap: 40px;
+  }
+
+  /* City results */
+  section#lodgings .searched-city-results-container .cards-container {
+    gap: 2em;
+    margin: var(--margin-medium) 0;
+  }
+  section#lodgings
+    .searched-city-results-container
+    .cards-container
+    article.card {
+    height: 200px;
+  }
+  section#lodgings
+    .searched-city-results-container
+    .cards-container
+    article.card
+    .content {
+    --font-size-small: 0.85em;
+  }
+
+  /* Populars */
+  section#lodgings > aside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section#lodgings > aside .cards-container {
+    margin-top: var(--margin-x);
+    flex: 1;
+  }
+  section#lodgings > aside .cards-container article.most-popular-card {
+    height: 140px;
+  }
+
+  /* -------- Activities section  */
+
+  section#activities .cards-container {
+    gap: 2em;
+}
+
+  section#activities .cards-container article.activity-card {
+    height: 475px;
+  }
+
 }
